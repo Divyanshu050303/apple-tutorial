@@ -1,0 +1,20 @@
+//
+//  CircleImage.swift
+//  chat-app
+//
+//  Created by RAC IT on 16/12/25.
+//
+
+import SwiftUI
+
+struct CircleImage: View {
+    var body: some View {
+        Image("turtlerock").clipShape(Circle()).overlay{
+            Circle().stroke(.white,lineWidth: 4)
+        }.shadow(radius: 8)
+    }
+}
+
+#Preview {
+    CircleImage()
+}
