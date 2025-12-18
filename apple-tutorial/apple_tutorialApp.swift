@@ -12,6 +12,7 @@ struct apple_tutorialApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(ModelData())
         }
     }
 }

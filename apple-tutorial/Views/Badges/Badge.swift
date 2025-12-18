@@ -1,9 +1,3 @@
-//
-//  Badge.swift
-//  apple-tutorial
-//
-//  Created by RAC IT on 16/12/25.
-//
 
 import SwiftUI
 

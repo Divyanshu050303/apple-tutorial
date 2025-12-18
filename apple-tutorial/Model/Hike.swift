@@ -1,18 +1,28 @@
-//
-//  Hike.swift
-//  apple-tutorial
-//
-//  Created by RAC IT on 17/12/25.
-//
+import Foundation
 
-import SwiftUI
+struct Hike: Codable, Hashable, Identifiable {
+    var id: Int
+    var name: String
+    var distance: Double
+    var difficulty: Int
+    var observations: [Observation]
 
-struct Hike: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+    static var formatter = LengthFormatter()
+
+
+    var distanceText: String {
+        Hike.formatter
+            .string(fromValue: distance, unit: .kilometer)
     }
-}
 
-#Preview {
-    Hike()
+
+    struct Observation: Codable, Hashable {
+        var distanceFromStart: Double
+
+
+        var elevation: Range<Double>
+        var pace: Range<Double>
+        var heartRate: Range<Double>
+    }
 }
